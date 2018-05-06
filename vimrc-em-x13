@@ -1,0 +1,43 @@
+"=========================
+"===Basic configuration===
+"=========================
+set nocompatible
+set mouse=a
+set clipboard=unnamed           " use OS clipboard
+syntax on
+let g:markdown_folding = 1      " enables markdown fold
+let g:markdown_fold_style = 'nested'
+map <C-l> :set nu!<CR>
+set number "set numbers on starup
+" source .vimrc
+map <C-x> :so ~/.vimrc<CR>
+"map <C-l> :set nonumber<CR>
+"set numberwidth=3
+"highlight LineNr term=bold cterm=NONE ctermfg=DarkGray ctermbg=gray gui=NONE guifg=DarkGrey guibg=NONE
+colorscheme default
+set ruler
+
+"==============================================================================
+"===== Vundle conf ============================================================
+"==============================================================================
+filetype on                     " required for vundle
+"set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+Plugin 'gmarik/Vundle.vim'      " let vundle manage vundle
+    " The following are examples of different formats supported.
+    " Keep Plugin commands between vundle#begin/end.
+    " plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+    " plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+    " Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+    " git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+    " The sparkup vim script is in a subdirectory of this repo called vim.
+    " Pass the path to set the runtimepath properly.Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+    " Avoid a name conflict with L9
+"Plugin 'user/L9', {'name': 'newL9'}
+:set nu! 
