@@ -1,0 +1,23 @@
+set -g prefix C-a
+#set -g set-clipboard on
+
+# set mouse on
+set -g mouse on
+
+set-window-option -g mode-keys vi
+
+#after installing
+#https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
+# sudo port intall tmux-pasteboard
+#set-option -g default-command "reattach-to-user-namespace -l zsh"
+
+#bind-key C-c run-shell 'tmux save-buffer - | reattach-to-user-namespace pbcopy'
+#bind-key C-v run-shell 'reattach-to-user-namespace pbpaste | tmux load-buffer - \; paste-buffer -d'
+
+set-option -g default-command "reattach-to-user-namespace -l bash"
+
+# New 2.4 version:
+bind-key -T copy-mode-vi 'v' send -X begin-selection
+bind-key -T copy-mode-vi 'y' send -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+# tmux-sidebar
+run-shell ~/clone/path/sidebar.tmux
