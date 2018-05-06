@@ -1,0 +1,20 @@
+#source ~/.bash_profile
+
+# Tell ls to be colorful
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+# Nice colored prompt
+export TERM="xterm-color"
+PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\W\[\e[0m\]\$ ' # W instead of w to get only current directory, not full path
+
+alias ls="ls -F"
+
+# Alias for directories
+shopt -s cdable_vars
+
+export _orco=$HOME/Documents/emlab_criera/projects/orco
+
