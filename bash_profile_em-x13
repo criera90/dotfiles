@@ -1,0 +1,12 @@
+# uses mc to change directory after exitting
+
+alias mc=". /usr/local/Cellar/midnight-commander/4.8.20/libexec/mc/mc-wrapper.sh"
+
+# path to bioinformatic programs
+export PATH="/Applications/bioinformatics/:$PATH"
+export PATH="/Applications/bioinformatics/phylip-3.695/:$PATH"
+export PATH="/Applications/bioinformatics/readseq.jar/:$PATH"
+export PATH="/Applications/bioinformatics/iqtree-1.6.3-MacOSX/bin/:$PATH"
+
+# source automatically  /.bashrc
+. ~/.bashrc
