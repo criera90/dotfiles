@@ -1,0 +1,6 @@
+#!/usr/bin/expect
+
+spawn ssh HOST_NAME
+expect "MESSAGE_ASKING_PASSWORD"
+send "PASSWORD\r"
+interact
