@@ -1,0 +1,10 @@
+#!/usr/bin/expect -f
+
+#set arg1 [lindex $argv 0]
+
+set home end_user "$env(HOME)\n"
+
+spawn scp -P 22 -r criera@bioservx.unl.edu:"$arg1" /Users/carlosriera/Downloads
+expect "criera@bioservx.unl.edu's password: "
+send "g0f0r1tn0W$\r"
+interact
